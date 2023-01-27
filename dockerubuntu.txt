@@ -8,3 +8,11 @@ sudo apt-get install -y docker.io
 and check docker -v
 
  sudo usermod -aG docker $USER
+ 
+ docker pull mongo
+ 
+ docker run --name kpmg-mongo -p 27107:27017 -d mongo
+ 
+ docker exec -it kpmg-mongo /bin/bash
+ 
+ #type mongosh
